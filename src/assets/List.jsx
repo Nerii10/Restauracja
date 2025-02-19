@@ -42,7 +42,7 @@ export default function List({name, content}) {
             <div className="ListButton" onClick={show} >
                 <div className="ListType">
                     <h2 style={{ margin: 0}}>{name ? name : "brak danych"}</h2>
-                    <img src={`/${name}.png`} style={{width:"70px",position:"absolute", left:"0%",top:5}}></img>
+                    <img src={`/Restauracja/${name}.png`} style={{width:"70px",position:"absolute", left:"0%",top:5}}></img>
                     <ToggleButton active={Hidden}/>
                 </div>
             </div>
