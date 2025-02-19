@@ -1,7 +1,7 @@
 import { useState, useRef, useEffect } from "react";
 import "./List.css";
 import ToggleButton from "./Misc/ToggleButton";
-
+import { circInOut, motion } from "framer-motion";
 
 export default function List({name, content}) {
     const [Hidden, setHidden] = useState(1);
@@ -17,7 +17,7 @@ export default function List({name, content}) {
     }, [Hidden]); 
 
     const List = {
-        backgroundColor: "#0A7075",
+        backgroundColor: "#032F30",
         width: "100%",
         height: Hidden ? "0px" : `500px`,
         maxHeight: "500px",
@@ -41,8 +41,19 @@ export default function List({name, content}) {
 
             <div className="ListButton" onClick={show} >
                 <div className="ListType">
-                    <h2 style={{ margin: 0}}>{name ? name : "brak danych"}</h2>
-                    <img src={`/Restauracja/${name}.png`} style={{width:"70px",position:"absolute", left:"0%",top:5}}></img>
+                    <motion.h2 style={{ margin: 0}}
+                    initial={{x:-20, skewX:"20deg",opacity:0}}
+                    whileInView={{x:0,skewX:"0deg",opacity:1}}
+                    transition={{duration:0.5 , ease:circInOut}}
+                    viewport={{once:false}}
+                    >{name ? name : "brak danych"}</motion.h2>
+                    <motion.img src={`/Restauracja/${name}.png`} style={{width:"70px",position:"absolute", left:"0%",top:5}}
+                     initial={{scale:0,opacity:0}}
+                     whileInView={{scale:1,opacity:1}}
+                     transition={{duration:0.5 , ease:circInOut}}
+                     viewport={{once:false}}
+                    ></motion.img>
+
                     <ToggleButton active={Hidden}/>
                 </div>
             </div>
@@ -56,11 +67,26 @@ export default function List({name, content}) {
                         <div className="ListEntry" key={index}>
                             <div key={index} className="ListEntryBox">
                                 <div className="ListEntryBoxMain" >
-                                    <h2>{food.name}</h2>
-                                    <h2>{food.price}</h2>
+                                    <motion.h2
+                                     initial={{x:-50, skewX:"20deg",opacity:0}}
+                                     whileInView={{x:0,skewX:"0deg",opacity:1}}
+                                     transition={{duration:0.5 , ease:circInOut}}
+                                     viewport={{once:false}}
+                                     >{food.name}</motion.h2>
+                                    <motion.h2
+                                     initial={{x:50, skewX:"-20deg",opacity:0}}
+                                     whileInView={{x:0,skewX:"0deg",opacity:1}}
+                                     transition={{duration:0.5 , ease:circInOut}}
+                                     viewport={{once:false}}
+                                     >{food.price}</motion.h2>
                                 </div>
                                 <div className="ListEntryBoxDesc">
-                                    <p style={{ wordBreak: "break-word"}}>{food.description}</p>
+                                    <motion.p style={{ wordBreak: "break-word"}}
+                                     initial={{y:20,opacity:0}}
+                                     whileInView={{y:0,opacity:1}}
+                                     transition={{duration:0.5 , ease:circInOut}}
+                                     viewport={{once:false}}
+                                     >{food.description}</motion.p>
                                 </div>
 
                             </div>

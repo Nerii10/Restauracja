@@ -1,6 +1,6 @@
 .NavButton{
     width: 100%; 
-    background-Color: #031716;
+    background-Color: #032927;
     display:flex;
     justify-Content: center;
     box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.329);
@@ -33,6 +33,7 @@
     padding: 5px;
     width: fit-content;
     transition: 0.5s ease;
+    cursor: pointer;
 }
 
 .Navbar li:hover{
