@@ -72,8 +72,8 @@ export default function Ratings() {
                             <motion.div 
                                 className="Rating" 
                                 key={index}
-                                animate={{ x: CurrentSlide * -100 + "%", opacity: (index==CurrentSlide ) ? 1 : 0 }} 
-                                transition={{ type: "tween", ease: "easeInOut" }}
+                                animate={{ x: CurrentSlide * -100 + "%", opacity: (index==CurrentSlide ) ? 1 : 0, scale: (index==CurrentSlide ) ? 1 : 0 }} 
+                                transition={{duration:0.3, type: "tween", ease: "circInOut" }}
                             >
                                 <div className="RatingContent">
                                     <div className="RatingContentMain">
