@@ -62,7 +62,7 @@ export default function Ratings() {
                         dragConstraints={{ left: 0, right: 0 }}
                         onDragEnd={handleDragEnd} 
                         style={{ width: "100%", display: "flex" }}
-                        dragElastic={0}
+                        dragElastic={0.1}
                         dragMomentum={false}
                     >
                     <button className="RatingButton" onClick={() => scroll(1)}>{`>`}</button >
@@ -72,7 +72,7 @@ export default function Ratings() {
                             <motion.div 
                                 className="Rating" 
                                 key={index}
-                                animate={{ x: CurrentSlide * -100 + "%" }} 
+                                animate={{ x: CurrentSlide * -100 + "%", opacity: (index==CurrentSlide ) ? 1 : 0 }} 
                                 transition={{ type: "tween", ease: "easeInOut" }}
                             >
                                 <div className="RatingContent">

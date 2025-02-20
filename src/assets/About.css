@@ -21,7 +21,6 @@
 
 .img{
     z-Index:0;
-    filter:hue-rotate(160deg) saturate(5) grayscale(0.4);
     width:60px;
 }
 
