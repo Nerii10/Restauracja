@@ -1,7 +1,7 @@
 import ToggleButton from "./Misc/ToggleButton";
 import './Navbar.css';
 import { useState } from "react";
-import { circIn, circInOut, motion } from "framer-motion";
+import { circIn, circInOut, easeInOut, easeOut, motion } from "framer-motion";
 
 export default function Navbar() {
 
@@ -43,30 +43,30 @@ export default function Navbar() {
                     <br></br>
                     <ul>
                         <motion.li onClick={()=>scrollToMenu("menu")}
-                        initial={{x:-90, opacity:0}}
+                        initial={{x:-50, opacity:0 }}
                         whileInView={{x:0,opacity:1}}
-                        transition={{duration:0.2 , ease:circInOut, delay:0}}
+                        transition={{duration:0.2 , ease:easeOut, delay:0}}
                         viewport={{once:false}}
                         >Menu</motion.li >
 
                         
                         <motion.li  onClick={()=>scrollToMenu("map")}
-                            initial={{x:-90, opacity:0}}
+                            initial={{x:-50, opacity:0}}
                             whileInView={{x:0,opacity:1}}
-                            transition={{duration:0.2 , ease:circInOut, delay:0.1}}
+                            transition={{duration:0.2 , ease:easeOut, delay:0.1}}
                             viewport={{once:false}}
                             >Lokalizacja</motion.li >
 
                         <motion.li  onClick={()=>scrollToMenu("about")}
-                              initial={{x:-90, opacity:0}}
+                              initial={{x:-50, opacity:0}}
                               whileInView={{x:0,opacity:1}}
-                              transition={{duration:0.2 , ease:circInOut, delay:0.2}}
+                              transition={{duration:0.2 , ease:easeOut, delay:0.2}}
                               viewport={{once:false}}
                               >O naszej Restauracji</motion.li >
                         <motion.li  onClick={()=>scrollToMenu("footer")}
-                              initial={{x:-90, opacity:0}}
+                              initial={{x:-50, opacity:0}}
                               whileInView={{x:0,opacity:1}}
-                              transition={{duration:0.2 , ease:circInOut, delay:0.3}}
+                              transition={{duration:0.2 , ease:easeOut, delay:0.3}}
                               viewport={{once:false}}
                               >Godziny otwarcia</motion.li >
                         <br></br>

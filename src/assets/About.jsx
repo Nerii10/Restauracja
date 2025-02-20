@@ -34,19 +34,16 @@ export default function About(){
                         O naszej restauracji
                     </motion.h1>
                  
-                    <p>
 
-                    <h2 className="about-title">Witamy <span className="highlight">U CZECHA</span>!</h2>
+                    <h2 className="about-title">Witamy u CZECHA!</h2>
                     <p className="about-text">
-                        Restauracja w sercu Międzywodzia, gdzie serwujemy zarówno 
-                        <span className="highlight"> świeże ryby</span> i owoce morza, jak i 
-                        <span className="highlight"> klasyczne polskie dania</span>. 
+                        Restauracja w sercu Międzywodzia, gdzie serwujemy zarówno <span> </span>
+                        <span className="highlight">świeże ryby</span> i owoce morza, jak i 
+                        <span> </span>
+                        <span className="highlight">klasyczne polskie dania</span>. 
                         Naszą pasją jest łączenie tradycji z nadmorskim smakiem.
-                    </p>
-                    <p className="about-text">
-                        Stawiamy na <b>jakość</b>, <b>świeżość</b> i <b>gościnność</b>, by każda wizyta była kulinarną przyjemnością.
-                    </p>
-                    <p className="about-invite">Zapraszamy do <b>Międzywodzia</b> i <b>Szczecina</b>!</p>
+                        Stawiamy na jakość, świeżość i gościnność, by każda wizyta była kulinarną przyjemnością.
+                        Zapraszamy do Międzywodzia i Szczecina!
 
                     </p>
 

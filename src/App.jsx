@@ -12,40 +12,51 @@ import Napoje from "./assets/Data/Napoje.json"
 
 function App() {
 
+  const SegmentStyle = {borderRadius:"20px", border:"white", borderStyle:"none",overflow:"hidden", width:"100%" ,zIndex:'1'}
+
+
   return (
     <>
       <Navbar/>
 
+      
      
       <br></br> <br></br> <br></br> <br></br> <br></br> <br></br>
       <br></br> <br></br> <br></br> <br></br> <br></br> <br></br>
 
-      <div id="menu" style={{borderRadius:"10px", border:"white", borderStyle:"solid",overflow:"hidden", width:"95%" , maxWidth:"1000px",zIndex:'1'}}>
-        <List name="Dania Główne" content={DaniaGlowne}/>
-        <List name="Zupy" content={Zupy}/>
-        <List name="Przystawki" content={Przystawki}/>
-        <List name="Napoje" content={Napoje}/>
+      <div style={{borderRadius:"20px", border:"none", borderStyle:"none", width:"90%" , maxWidth:"1000px", display:"flex",justifyContent:"center",alignItems:"center",flexDirection:"column"}}>
 
+          <div id="menu" style={SegmentStyle}>
+            <List name="Dania Główne" content={DaniaGlowne}/>
+            <List name="Zupy" content={Zupy}/>
+            <List name="Przystawki" content={Przystawki}/>
+            <List name="Napoje" content={Napoje}/>
+          </div>
+
+        <br></br> <br></br> <br></br> <br></br> <br></br> <br></br>
+        <br></br> <br></br> <br></br> <br></br> <br></br> <br></br>
+
+        <div id="menu"  style={SegmentStyle}>
+                    <Map></Map>
+        </div>
+        
+        <br></br> <br></br> <br></br> <br></br> <br></br> <br></br>
+        <br></br> <br></br> <br></br> <br></br> <br></br> <br></br>
+
+        <div id="menu"  style={SegmentStyle}>
+                  <About></About>
+        
+        </div>
+
+        <br></br> <br></br> <br></br> <br></br> <br></br> <br></br>
+        <br></br> <br></br> <br></br> <br></br> <br></br> <br></br>
 
 
       </div>
 
-      <br></br> <br></br> <br></br> <br></br> <br></br> <br></br>
-      <br></br> <br></br> <br></br> <br></br> <br></br> <br></br>
+     
 
-
-      <div id="menu" style={{borderRadius:"10px", border:"white", borderStyle:"solid",overflow:"hidden", width:"95%" , maxWidth:"1000px",zIndex:'1'}}>
-        <Map></Map>
-      </div>
-      <br></br> <br></br> <br></br> <br></br> <br></br> <br></br>
-      <br></br> <br></br> <br></br> <br></br> <br></br> <br></br>
-
-      <About></About>
-      
-
-      <br></br> <br></br> <br></br> <br></br> <br></br> <br></br>
-      <br></br> <br></br> <br></br> <br></br> <br></br> <br></br>
-
+     
       <Footer></Footer>
     </>
   )
