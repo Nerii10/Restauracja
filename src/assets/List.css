@@ -30,6 +30,7 @@
 .ListType {
     width: 80%;
     display: flex; 
+    position: relative;
     justify-Content: space-between;
 }
 

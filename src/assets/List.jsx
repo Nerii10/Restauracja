@@ -53,7 +53,6 @@ export default function List({name, content}) {
                      transition={{duration:0.5 , ease:circInOut}}
                      viewport={{once:false}}
                     ></motion.img>
-
                     <ToggleButton active={Hidden}/>
                 </div>
             </div>
