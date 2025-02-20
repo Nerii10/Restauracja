@@ -25,7 +25,7 @@ export default function Navbar() {
 
     return (
         <>
-        <div style={{width:"100%",position:"absolute",top:0,zIndex:5, cursor:"pointer"}}>
+        <div style={{width:"100%",position:"fixed",top:0,zIndex:5, cursor:"pointer"}}>
             <div className="NavButton" onClick={ListInteraction}>
                 <div style={{ width: "80%", display: "flex", justifyContent: "space-between", alignItems: "center",cursor:"pointer" }}>
                     <h1 style={{}}>UCzecha</h1>
@@ -67,7 +67,7 @@ export default function Navbar() {
                               transition={{duration:0.2 , ease:circInOut, delay:0.2}}
                               viewport={{once:false}}
                               >O naszej Restauracji</motion.li >
-                        <motion.li  onClick={()=>scrollToMenu("footer")}
+                        <motion.li  onClick={()=>scrollToMenu("Ratings")}
                               initial={initial}
                               whileInView={whileInView}
                               transition={{duration:0.2 , ease:circInOut, delay:0.3}}

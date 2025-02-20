@@ -33,11 +33,12 @@ export default function Ratings() {
                     viewport={{once:true}}
                     transition={{duration:0.5, ease: circInOut}}
                     style={{position:'relative',zIndex:1}}
+                    className="OpinionHighliht"
                     >
                         Poznaj Opinie Naszych Gości!
                         
-                    <motion.div style={{position:'absolute' ,backgroundColor:"red", width:"52%"
-                    , right:0,top:0, zIndex:-1, color:"red",transform: "skewX(-20deg)",
+                    <motion.div style={{position:'absolute' ,backgroundColor:"rgb(133, 15, 21)", width:"52%"
+                    , right:0,top:0, zIndex:-1, color:"rgb(133, 15, 21)",transform: "skewX(-20deg)",
                     rotate:"3deg",
                     }}
                     initial={{opacity:0, width:'0%'}}
@@ -76,7 +77,7 @@ export default function Ratings() {
                             >
                                 <div className="RatingContent">
                                     <div className="RatingContentMain">
-                                        <h1>{opinion.Opinion}</h1>
+                                        <p style={{fontWeight:"600"}}>{opinion.Opinion}</p>
                                     </div>
                                     <div className="RatingContentRating">
                                         <img src={`/Restauracja/${opinion.Rating}.png`} className="RatingImage"></img>
@@ -85,13 +86,16 @@ export default function Ratings() {
                             </motion.div>
                         ))}
 
-<button className="RatingButton" onClick={() => scroll(-1)}>{`<`}</button >
+                        <button className="RatingButton" onClick={() => scroll(-1)}>{`<`}</button >
 
                     </motion.div>
-
+                    
 
                 </div>
 
+                <div style={{textAlign:'center'}}>
+                        <p>{CurrentSlide+1}/{Opinions.length+1}</p>
+                </div>
                
             </div>
         </div>
