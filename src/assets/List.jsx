@@ -40,6 +40,12 @@ export default function List({name, content}) {
         <div className="List">
 
             <div className="ListButton" onClick={show} >
+            <motion.img src={`/Restauracja/${name}.png`} style={{width:"70px",position:"absolute", left:"5%",top:5}}
+                     initial={{scale:0,opacity:0}}
+                     whileInView={{scale:1,opacity:1}}
+                     transition={{duration:0.5 , ease:circInOut}}
+                     viewport={{once:false}}
+                    ></motion.img>
                 <div className="ListType">
                     <motion.h2 style={{ margin: 0}}
                     initial={{x:-20, skewX:"20deg",opacity:0}}
@@ -47,12 +53,7 @@ export default function List({name, content}) {
                     transition={{duration:0.5 , ease:circInOut}}
                     viewport={{once:false}}
                     >{name ? name : "brak danych"}</motion.h2>
-                    <motion.img src={`/Restauracja/${name}.png`} style={{width:"70px",position:"absolute", left:"0%",top:5}}
-                     initial={{scale:0,opacity:0}}
-                     whileInView={{scale:1,opacity:1}}
-                     transition={{duration:0.5 , ease:circInOut}}
-                     viewport={{once:false}}
-                    ></motion.img>
+                    
                     <ToggleButton active={Hidden}/>
                 </div>
             </div>
