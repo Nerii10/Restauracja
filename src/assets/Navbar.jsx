@@ -25,7 +25,7 @@ export default function Navbar() {
 
     return (
         <>
-        <div style={{width:"100%",position:"absolute",top:0,zIndex:5}}>
+        <div style={{width:"100%",position:"absolute",top:0,zIndex:5, cursor:"pointer"}}>
             <div className="NavButton" onClick={ListInteraction}>
                 <div style={{ width: "80%", display: "flex", justifyContent: "space-between", alignItems: "center",cursor:"pointer" }}>
                     <h1 style={{}}>UCzecha</h1>
@@ -72,7 +72,7 @@ export default function Navbar() {
                               whileInView={whileInView}
                               transition={{duration:0.2 , ease:circInOut, delay:0.3}}
                               viewport={{once:false}}
-                              >Godziny otwarcia</motion.li >
+                              >Opinie</motion.li >
                         <br></br>
                     </ul>
                 </div>

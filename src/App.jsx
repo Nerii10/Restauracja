@@ -3,6 +3,7 @@ import Navbar from './assets/Navbar'
 import List from './assets/List'
 import Map from './assets/Map'
 import About from './assets/About'
+import Ratings from './assets/Ratings'
 import Footer from './assets/Footer'
 
 import DaniaGlowne from "./assets/Data/DaniaGlowne.json"
@@ -52,12 +53,17 @@ function App() {
         <br></br> <br></br> <br></br> <br></br> <br></br> <br></br>
 
 
+        <div id="menu"  style={SegmentStyle}>
+          <Ratings></Ratings>
+        </div>
+
+        <br></br> <br></br> <br></br> <br></br> <br></br> <br></br>
+        <br></br> <br></br> <br></br> <br></br> <br></br> <br></br>
       </div>
 
      
-
-     
       <Footer></Footer>
+     
     </>
   )
 }
