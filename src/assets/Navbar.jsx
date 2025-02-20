@@ -19,6 +19,10 @@ export default function Navbar() {
         }
     }
 
+    const initial={x:-50, color:"transparent" }
+
+    const whileInView={x:0,color:"white"}
+
     return (
         <>
         <div style={{width:"100%",position:"absolute",top:0,zIndex:5}}>
@@ -43,30 +47,30 @@ export default function Navbar() {
                     <br></br>
                     <ul>
                         <motion.li onClick={()=>scrollToMenu("menu")}
-                        initial={{x:-50, }}
-                        whileInView={{x:0,}}
-                        transition={{duration:0.2 , ease:easeOut, delay:0}}
+                        initial={initial}
+                        whileInView={whileInView}
+                        transition={{duration:0.2 , ease:circInOut, delay:0}}
                         viewport={{once:false}}
                         >Menu</motion.li >
 
                         
                         <motion.li  onClick={()=>scrollToMenu("map")}
-                            initial={{x:-50, }}
-                            whileInView={{x:0,}}
-                            transition={{duration:0.2 , ease:easeOut, delay:0.1}}
+                            initial={initial}
+                            whileInView={whileInView}
+                            transition={{duration:0.2 , ease:circInOut, delay:0.1}}
                             viewport={{once:false}}
                             >Lokalizacja</motion.li >
 
                         <motion.li  onClick={()=>scrollToMenu("about")}
-                              initial={{x:-50, }}
-                              whileInView={{x:0,}}
-                              transition={{duration:0.2 , ease:easeOut, delay:0.2}}
+                            initial={initial}
+                            whileInView={whileInView}
+                              transition={{duration:0.2 , ease:circInOut, delay:0.2}}
                               viewport={{once:false}}
                               >O naszej Restauracji</motion.li >
                         <motion.li  onClick={()=>scrollToMenu("footer")}
-                              initial={{x:-50, }}
-                              whileInView={{x:0,}}
-                              transition={{duration:0.2 , ease:easeOut, delay:0.3}}
+                              initial={initial}
+                              whileInView={whileInView}
+                              transition={{duration:0.2 , ease:circInOut, delay:0.3}}
                               viewport={{once:false}}
                               >Godziny otwarcia</motion.li >
                         <br></br>
