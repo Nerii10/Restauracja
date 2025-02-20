@@ -38,7 +38,7 @@
 
 .RatingContentMain{
     height: 70%;
-    width: 90%;
+    width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -54,43 +54,41 @@
 }
 
 .RatingButton:nth-child(11){
-    left: 0%;
-    width: 10%;
+    left: 5%;
+    width: 5%;
 }
 
 .RatingButton:nth-child(1){
     left: 90%;
-    width: 10%;
+    width: 5%;
 }
 
 .OpinionHighliht{
     font-size: 30px;
 }
 
-.RatingButton{
+.RatingButton {
     position: absolute;
-    height: 80%;
-    width: 5%;
+    margin-top: 100px;
+    height: 20%;
+    border-radius: 20px;
     z-index: 2;
-    color:rgb(255, 208, 77);
+    color: rgb(255, 208, 77);
     background-color: rgba(128, 128, 128, 0);
-    filter:drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.384));
+    filter: drop-shadow(0px 2px 1px rgba(0, 0, 0, 0.384));
     border: none;
     font-weight: 900;
-    scale: 2;
+    scale: 1.5;
     opacity: 1;
     cursor: pointer;
     transition: 0.5s ease;
-    font-family:fantasy;
 }
 
 .RatingButton:hover{
-    scale: 3;
     color:rgb(255, 174, 0);
 }
 
 .RatingContainer{
-
     width: 100%;
     max-width: 500px;
     display: flex;
