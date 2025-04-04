@@ -1,6 +1,6 @@
 .MapContainer{
     width: 100%;
-    background-color: #032F30;
+    background-color: var(--AccentColor);
     border-radius: 0px;
     display: flex;
     justify-content: center;

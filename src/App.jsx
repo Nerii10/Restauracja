@@ -32,12 +32,12 @@ function App() {
       style={{position:'relative',zIndex:1}}
       >Menu
         
-        <motion.div style={{position:'absolute' ,backgroundColor:"#0d4f38", width:"52%"
-                    , right:0,top:0, zIndex:-1, color:"#0d4f38",transform: "skewX(-20deg)",
+        <motion.div style={{position:'absolute' ,backgroundColor:"var(--AccentColor)", width:"52%"
+                    , right:0,top:0, zIndex:-1, transform: "skewX(-20deg)", color:"var(--AccentColor)", borderRadius:'3px',
                     rotate:"3deg",
                     }}
                     initial={{opacity:0, width:'0%'}}
-                    whileInView={{opacity:1,width:'100%'}}
+                    whileInView={{opacity:1,width:'150%', x:21}}
                     viewport={{once:false}}
                     transition={{duration:0.5, ease: circInOut, delay:0.2}}
                     >

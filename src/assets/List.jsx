@@ -19,7 +19,7 @@ export default function List({name, content}) {
     }, [Hidden]); 
 
     const List = {
-        backgroundColor: "#032F30",
+        backgroundColor: "var(--AccentColor)",
         width: "100%",
         height: Hidden ? "0px" : `500px`,
         maxHeight: "500px",
@@ -105,6 +105,7 @@ export default function List({name, content}) {
                                      whileInView={{x:0,skewX:"0deg",opacity:1}}
                                      transition={{duration:0.5 , ease:circInOut}}
                                      viewport={{once:false}}
+                                     style={{ color:"rgb(109, 158, 255)"}}
                                      >{food.price}</motion.h2>
                                 </div>
                                 <div className="ListEntryBoxDesc">

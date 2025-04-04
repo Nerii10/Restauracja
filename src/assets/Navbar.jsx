@@ -37,9 +37,10 @@ export default function Navbar() {
                 width: "100%",
                 height: Hidden ? "0px" : "200px",
                 paddingBlock: Hidden ? "0px" : "10px",
-                backgroundColor: "#031716",
+                backgroundColor: "var(--NavbarDropDownColor)",
                 display: 'flex',
                 justifyContent:"center",
+                borderBottom: Hidden ? "none" : "1px rgba(255, 255, 255, 0.9) solid",
                 transition:"0.5s ease",
                 overflow:"hidden",
                 }}>

@@ -1,6 +1,6 @@
 .NavButton{
     width: 100%; 
-    background-Color: #032927;
+    background-color: var(--AccentColor);
     display:flex;
     justify-Content: center;
     box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.329);
@@ -43,7 +43,6 @@
 
 .Navbar li::before {
     content: "";
-    background-color: rgba(209, 13, 23, 0.103);
     border-radius: 20px;
     height: 5px;
     width: 0%;

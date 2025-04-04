@@ -74,6 +74,7 @@ export default function About(){
                          initial={{opacity:0, y:40,skew:"-20deg"}}
                          whileInView={{opacity:1,y:0,skew:"0deg"}}
                          viewport={{once:true}}
+                         style={{width:"33%"}}
                          transition={{duration:0.5, ease: circInOut, delay:0.8}}
                         >
                             <h4 style={{margin:0}}>Świeże ryby</h4> 
@@ -84,6 +85,7 @@ export default function About(){
                          initial={{opacity:0, y:40,skew:"-20deg"}}
                          whileInView={{opacity:1,y:0,skew:"0deg"}}
                          viewport={{once:true}}
+                         style={{width:"33%"}}
                          transition={{duration:0.5, ease: circInOut, delay:1}}
                         >
                             <h4 style={{margin:0}}>Klimatyczna atmosfera</h4>
@@ -95,6 +97,7 @@ export default function About(){
                          whileInView={{opacity:1,y:0,skew:"0deg"}}
                          viewport={{once:true}}
                          transition={{duration:0.5, ease: circInOut, delay:1.2}}
+                         style={{width:"33%"}}
                         >
                             <h4 style={{margin:0}}>Smak, który pokochasz</h4>
                             <motion.span className="IconEmoi">🍽️</motion.span>
