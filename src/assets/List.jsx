@@ -3,6 +3,8 @@ import "./List.css";
 import ToggleButton from "./Misc/ToggleButton";
 import { circInOut, motion } from "framer-motion";
 
+import { Soup , GlassWater, Fish, CakeSlice } from "lucide-react";
+
 export default function List({name, content}) {
     const [Hidden, setHidden] = useState(1);
     const [height, setHeight] = useState(0);
@@ -34,21 +36,46 @@ export default function List({name, content}) {
         setHidden((prev) => (prev === 0 ? 1 : 0));
     }
 
+    function icon(name){
+        let size = 35;
+        let strokeW = 2;
+        switch (name) {
+            case "Zupy":
+                return(<Soup size={size} strokeWidth={strokeW}></Soup>)
+                break;
+            case "Dania Główne":
+                return(<Fish size={size} strokeWidth={strokeW}></Fish>)
+                break;
+            case "Przystawki":
+                return(<CakeSlice size={size} strokeWidth={strokeW}></CakeSlice>)
+                break;
+            case "Napoje":
+                return(<GlassWater size={size} strokeWidth={strokeW}></GlassWater>)
+                break;
+            default:
+                break;
+        }
+    }
+
     return (
         <>
 
         <div className="List">
 
             <div className="ListButton" onClick={show} >
-            <motion.img src={`/Restauracja/${name}.png`} style={{width:"70px",position:"absolute", left:"5%",top:5}}
-                     initial={{scale:0,opacity:0}}
-                     whileInView={{scale:1,opacity:1}}
-                     transition={{duration:0.5 , ease:circInOut}}
-                     viewport={{once:false}}
-                    ></motion.img>
+       
+                <motion.div style={{width:"70px",position:"absolute", left:"5%", height:"100%", display:"flex", justifyContent:'center',alignItems:'center'}}
+                        initial={{scale:0,opacity:0}}
+                        whileInView={{scale:1,opacity:1}}
+                        transition={{duration:0.5 , ease:circInOut}}
+                        viewport={{once:false}}>
+                            {name && icon(name)}
+                </motion.div>    
+          
+
                 <div className="ListType">
                     <motion.h2 style={{ margin: 0}}
-                    initial={{x:-20, skewX:"20deg",opacity:0}}
+                    initial={{x:-20, skewX:"10deg",opacity:0.5}}
                     whileInView={{x:0,skewX:"0deg",opacity:1}}
                     transition={{duration:0.5 , ease:circInOut}}
                     viewport={{once:false}}
