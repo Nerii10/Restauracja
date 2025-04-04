@@ -2,7 +2,7 @@
   font-family: Helvetica;
   color: rgba(255, 255, 255, 0.87);
   font-synthesis: none; 
-  background-color: var(--MainColor);
+  background: fixed linear-gradient(to bottom, rgb(42, 177, 255), rgb(4, 12, 66));
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   width: 100%;
@@ -16,9 +16,9 @@
 
 body, html {
   --MainColor: #0f1421;
-  --AccentColor: #295d8e;;
-  --SecondAccentColor: #234578;
-  --NavbarDropDownColor: #172c4c;
+  --AccentColor: #1d476e;;
+  --SecondAccentColor: #1c6d9f76;
+  --NavbarDropDownColor: #152f52;
   background-Color: var(--AccentColor);
   margin: 0;
   width: 100%;

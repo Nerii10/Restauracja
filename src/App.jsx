@@ -15,7 +15,8 @@ import Napoje from "./assets/Data/Napoje.json"
 
 function App() {
 
-  const SegmentStyle = {borderRadius:"20px", border:"white", borderStyle:"none",overflow:"hidden", width:"100%" ,zIndex:'1'}
+  const SegmentStyle = {borderRadius:"20px",overflow:"hidden", width:"100%" ,zIndex:'1', border:"2px rgba(255, 255, 255, 0.45) solid" 
+  }
 
 
   return (
