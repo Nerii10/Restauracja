@@ -1,10 +1,9 @@
 .NavButton{
     width: 100%; 
-    background-color: var(--AccentColor);
     display:flex;
     justify-Content: center;
-    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, 0.329);
     z-index: 20;
+    height: 70px;
     cursor:"pointer";
 }
 

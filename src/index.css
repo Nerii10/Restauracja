@@ -1,8 +1,7 @@
 .root {
   font-family: Helvetica;
-  color: rgba(255, 255, 255, 0.87);
+  color: rgb(255, 255, 255);
   font-synthesis: none; 
-  background: fixed linear-gradient(to bottom, rgb(42, 177, 255), rgb(4, 12, 66));
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   width: 100%;
@@ -15,11 +14,10 @@
 }
 
 body, html {
-  --MainColor: #0f1421;
-  --AccentColor: #1d476e;;
-  --SecondAccentColor: #1c6d9f76;
-  --NavbarDropDownColor: #152f52;
-  background-Color: var(--AccentColor);
+  --AccentColor: #363636a8;;
+  --SecondAccentColor: #151515;
+  --NavbarDropDownColor: #161616;
+  background-Color:rgb(12, 12, 12);
   margin: 0;
   width: 100%;
   height: 100%;

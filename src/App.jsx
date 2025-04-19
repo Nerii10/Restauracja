@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useEffect, useState } from 'react'
 import Navbar from './assets/Navbar'
 import List from './assets/List'
 import Map from './assets/Map'
@@ -12,18 +12,39 @@ import DaniaGlowne from "./assets/Data/DaniaGlowne.json"
 import Zupy from "./assets/Data/Zupy.json"
 import Przystawki from "./assets/Data/Przystawki.json"
 import Napoje from "./assets/Data/Napoje.json"
+import Landing from './assets/Landing'
 
 function App() {
+
+  const [Scroll, setScroll] = useState(0)
 
   const SegmentStyle = {borderRadius:"20px",overflow:"hidden", width:"100%" ,zIndex:'1', border:"2px rgba(255, 255, 255, 0.45) solid" 
   }
 
+  useEffect(() => {
+    const handleScroll = () => {
+      setScroll(window.scrollY);
+    };
+  
+    window.addEventListener("scroll", handleScroll);
+  
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+ 
+
 
   return (
     <>
-      <Navbar/>
 
-      <br></br> <br></br> <br></br> <br></br> <br></br> <br></br>
+    <Navbar scroll={Scroll} />
+
+
+
+      <Landing></Landing>
+
+
 
       <motion.h1
       initial={{opacity:0, y:-40}}
@@ -34,7 +55,7 @@ function App() {
       >Menu
         
         <motion.div style={{position:'absolute' ,backgroundColor:"var(--AccentColor)", width:"52%"
-                    , right:0,top:0, zIndex:-1, transform: "skewX(-20deg)", color:"var(--AccentColor)", borderRadius:'3px',
+                    , right:0,top:0, zIndex:-1, transform: "skewX(-20deg)", color:"transparent", borderRadius:'3px',
                     rotate:"3deg",
                     }}
                     initial={{opacity:0, width:'0%'}}
@@ -42,7 +63,7 @@ function App() {
                     viewport={{once:false}}
                     transition={{duration:0.5, ease: circInOut, delay:0.2}}
                     >
-                        -
+                      .
                     </motion.div>
       
       

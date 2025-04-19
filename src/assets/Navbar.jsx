@@ -1,9 +1,9 @@
 import ToggleButton from "./Misc/ToggleButton";
 import './Navbar.css';
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { circIn, circInOut, easeInOut, easeOut, motion } from "framer-motion";
 
-export default function Navbar() {
+export default function Navbar(scroll) {
 
     const [Hidden, setHidden] = useState(1);
 
@@ -25,9 +25,13 @@ export default function Navbar() {
 
     return (
         <>
-        <div style={{width:"100%",position:"fixed",top:0,zIndex:5, cursor:"pointer"}}>
+        <motion.div style={{width:"100%",position:"fixed",top:0,zIndex:5, cursor:"pointer", backgroundColor:`var(--NavbarDropDownColor)`}}
+        initial={{top:"-100px", opacity:0}}
+        animate={scroll.scroll >= 400 ? { top: "0px" , opacity:1} : { top: "-100px" , opacity:0.5}}
+        transition={{ease: "circInOut" , type:"spring", damping:23}}
+        >
             <div className="NavButton" onClick={ListInteraction}>
-                <div style={{ width: "80%", display: "flex", justifyContent: "space-between", alignItems: "center",cursor:"pointer" }}>
+                <div style={{ width: "90%", display: "flex", justifyContent: "space-between", alignItems: "center",cursor:"pointer"}}>
                     <h1 style={{}}>UCzecha</h1>
                     <ToggleButton active={Hidden}></ToggleButton>
                 </div>
@@ -37,7 +41,6 @@ export default function Navbar() {
                 width: "100%",
                 height: Hidden ? "0px" : "200px",
                 paddingBlock: Hidden ? "0px" : "10px",
-                backgroundColor: "var(--NavbarDropDownColor)",
                 display: 'flex',
                 justifyContent:"center",
                 borderBottom: Hidden ? "none" : "1px rgba(255, 255, 255, 0.9) solid",
@@ -78,7 +81,7 @@ export default function Navbar() {
                     </ul>
                 </div>
             </div>
-            </div>
+            </motion.div>
         </>
     );
 }
