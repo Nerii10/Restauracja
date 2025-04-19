@@ -25,10 +25,7 @@ export default function Navbar(scroll) {
 
     return (
         <>
-        <motion.div style={{width:"100%",position:"fixed",top:0,zIndex:5, cursor:"pointer", backgroundColor:`var(--NavbarDropDownColor)`}}
-        initial={{top:"-100px", opacity:0}}
-        animate={scroll.scroll >= 400 ? { top: "0px" , opacity:1} : { top: "-100px" , opacity:0.5}}
-        transition={{ease: "circInOut" , type:"spring", damping:23}}
+        <motion.div style={{width:"100%",position:"fixed",top:0,zIndex:5, cursor:"pointer", backgroundColor: Hidden ?`rgba(0,0,0,${scroll.scroll/300})` : `rgb(0,0,0)`, transition:"0.2s linear"}}
         >
             <div className="NavButton" onClick={ListInteraction}>
                 <div style={{ width: "90%", display: "flex", justifyContent: "space-between", alignItems: "center",cursor:"pointer"}}>
