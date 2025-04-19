@@ -65,10 +65,10 @@ export default function List({name, content}) {
             <div className="ListButton" onClick={show} >
        
                 <motion.div style={{width:"70px",position:"absolute", left:"5%", height:"100%", display:"flex", justifyContent:'center',alignItems:'center'}}
-                        initial={{scale:0,opacity:0}}
-                        whileInView={{scale:1,opacity:1}}
+                        initial={{scale:0,opacity:0.5}}
+                        animate={{scale:1,opacity:1}}
                         transition={{duration:0.5 , ease:circInOut}}
-                        viewport={{once:false}}>
+                        >
                             {name && icon(name)}
                 </motion.div>    
           
@@ -76,9 +76,8 @@ export default function List({name, content}) {
                 <div className="ListType">
                     <motion.h2 style={{ margin: 0}}
                     initial={{x:-20, skewX:"10deg",opacity:0.5}}
-                    whileInView={{x:0,skewX:"0deg",opacity:1}}
+                    animate={{x:0,skewX:"0deg",opacity:1}}
                     transition={{duration:0.5 , ease:circInOut}}
-                    viewport={{once:false}}
                     >{name ? name : "brak danych"}</motion.h2>
                     
                     <ToggleButton active={Hidden}/>
@@ -95,13 +94,13 @@ export default function List({name, content}) {
                             <div key={index} className="ListEntryBox">
                                 <div className="ListEntryBoxMain" >
                                     <motion.h2
-                                     initial={{x:-50, skewX:"20deg",opacity:0}}
+                                     initial={{x:-50, skewX:"20deg",opacity:0.1}}
                                      whileInView={{x:0,skewX:"0deg",opacity:1}}
                                      transition={{duration:0.5 , ease:circInOut}}
                                      viewport={{once:false}}
                                      >{food.name}</motion.h2>
                                     <motion.h2
-                                     initial={{x:50, skewX:"-20deg",opacity:0}}
+                                     initial={{x:50, skewX:"-20deg",opacity:0.1}}
                                      whileInView={{x:0,skewX:"0deg",opacity:1}}
                                      transition={{duration:0.5 , ease:circInOut}}
                                      viewport={{once:false}}
@@ -110,7 +109,7 @@ export default function List({name, content}) {
                                 </div>
                                 <div className="ListEntryBoxDesc">
                                     <motion.p style={{ wordBreak: "break-word"}}
-                                     initial={{y:20,opacity:0}}
+                                     initial={{y:20,opacity:0.1}}
                                      whileInView={{y:0,opacity:1}}
                                      transition={{duration:0.5 , ease:circInOut}}
                                      viewport={{once:false}}

@@ -25,7 +25,7 @@ export default function Navbar(scroll) {
 
     return (
         <>
-        <motion.div style={{width:"100%",position:"fixed",top:0,zIndex:5, cursor:"pointer", backgroundColor: Hidden ?`rgba(0,0,0,${scroll.scroll/300})` : `rgb(0,0,0)`, transition:"0.2s linear"}}
+        <motion.div style={{width:"100%",position:"fixed",top:0,zIndex:5, cursor:"pointer", backgroundColor: Hidden ?`rgba(0,0,0,${scroll.scroll/200})` : `rgb(0,0,0)`}}
         >
             <div className="NavButton" onClick={ListInteraction}>
                 <div style={{ width: "90%", display: "flex", justifyContent: "space-between", alignItems: "center",cursor:"pointer"}}>

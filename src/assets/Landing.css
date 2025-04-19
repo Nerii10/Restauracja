@@ -30,17 +30,19 @@
 @media only screen and (max-width:600px) {
     .LandingBackground{
         width: 100%;
-        max-width: 900px;
         height: 600px;
         overflow: hidden;
         z-index: 0;
         position: relative;
-        display: flex;
-        justify-content: center;
     }
     
     .LandingBackgroundImage{
         z-index: 0;
+        flex-shrink: 0;
+        height: 100%;
+        width: auto;
+        left: -30%;
+        position:absolute;
     }
     
     .LandingBackgroundMask{
